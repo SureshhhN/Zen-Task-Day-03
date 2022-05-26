@@ -1,0 +1,196 @@
+Day-03 Tasks:
+
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach);-
+
+* for-loop :
+
+Generally, loops are used to repeat a block of code.  In JavaScript for loops take three arguments: initialization, 
+condition, and increment.The condition expression is evaluated on every loop. 
+A loop continues to run if the expression returns true.
+
+let a = ["a", "b", "c"];
+for (let index = 0; index < a.length; ++index) {
+    let element = a[index];
+    console.log(element);
+}
+
+//Output :
+
+a
+b
+c
+
+* for in-loop :
+
+The for-in loop is a basic control statement that allows you to loop through the properties of an object. 
+The statements of code found within the loop body will be executed once for each property of the object.
+
+var fav_colors = [ 'Purple', 'Orange', 'Green' ];
+
+for (var color in fav_colors) {
+   console.log(fav_colors[color]);
+}
+
+//Output :
+
+Purple
+Orange
+Green
+
+* for of-loop :
+
+The for-of loop statement creates a loop iterating over iterable objects.It invokes a custom iteration hook
+with statements to be executed for the value of each distinct property of the object.
+
+const words = ['Hi', 'Hello', 'guvi'];
+
+for (const element of words) {
+  console.log(element);
+}
+
+//Output :
+
+"Hi"
+"Hello"
+"guvi"
+
+* forEach-loop:
+
+In JavaScript forEach loop is an Array method that executes a custom callback function on each item
+in an array. The forEach loop can only be used on Arrays, Sets, and Maps.
+
+let students = ['Peter', 'Eddie', 'Brock'];
+
+students.forEach(myFunction);
+
+function myFunction(item) {
+
+    console.log(item);
+}
+
+//Output :
+
+Peter
+Eddie
+Brock
+-------------------------------------------------------------------------------------------------------------------------
+2. Create your own resume data in JSON format ;-
+
+let suresh = {
+    "MySelf": {
+      "name": "Suresh",
+      "label": "Developer",      
+      "email": "sureshkrish55555@gmail.com",
+      "phone": "8838015615",
+      
+      "location": {
+        "address": "No-1, xyz street",
+        "postalCode": "621010",
+        "city": "Trichy",
+          },
+      "profiles": [{
+        "network": "github",
+        "username": "SureshhhN",
+        "url": "https://github.com/SureshhhN"
+      }]
+    },
+    "work": [{
+      "name": "Omega Pvt ltd",
+      "position": "Senior Executive",
+      "startDate": "2019-12-16",
+    }],
+
+    "education": [{
+      "institution": "Sudharshana Polytechnic College",
+      "dept": "Mechanical Engineering",
+      "startYear": "2015",
+      "endYear": "2018",
+      "score": "93%",
+    }],
+
+    "languages": [{
+      "language": "Tamil,English",
+      "fluency": "Moderate"
+    }],
+    
+    "interests": [{
+      "name": "Information Technology",
+      "keywords": [
+        "FullStack Web Development"
+      ]
+    }],
+  }
+
+  for(var key in suresh){
+    console.log(key, " - ", suresh[key])
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+3. The difference between window, screen and document in javascript ;-
+
+*window:
+
+window is the execution context and global object for that context's JavaScript.
+window properties,
+ 
+setTimeout() and setInterval() 
+location 
+history with methods back() and forward()
+navigator
+
+*document:
+
+document contains the DOM, initialized by parsing HTML.
+Each window object has a document object to be rendered.
+Eg;
+
+<body>
+  <p id="holyCow"> This is the first paragraph.</p>
+</body>
+
+window.Helloguvi or window["Helloguvi"]
+
+document.getElementById("Helloguvi")
+document.querySelector("#Helloguvi")
+document.body.firstChild
+document.body.children[0]
+
+*screen:
+
+screen describes the physical display's full screen.
+screen properties width and height are the full screen.
+screen properties availWidth and availHeight omit the toolbar.
+The portion of a screen displaying the rendered document is the viewport in JavaScript.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
